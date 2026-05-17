@@ -6,6 +6,7 @@
 #include "Luau/IrUtils.h"
 
 #include <array>
+#include <algorithm>
 
 #include "lobject.h"
 
