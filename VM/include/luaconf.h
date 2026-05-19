@@ -46,8 +46,13 @@
 #endif
 
 // Can be used to reconfigure visibility/exports for public APIs
+// Use extern "C" when compiling as C++ to make the API callable from C code.
 #ifndef LUA_API
+#ifdef __cplusplus
+#define LUA_API extern "C"
+#else
 #define LUA_API extern
+#endif
 #endif
 
 #define LUALIB_API LUA_API
